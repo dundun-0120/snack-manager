@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="16" fill="#B8860B"/>
+  <text x="100" y="95" text-anchor="middle" dominant-baseline="central" font-size="64">🟤</text>
+  <text x="100" y="170" text-anchor="middle" font-size="16" fill="white" font-family="sans-serif">费列罗巧克力</text>
+</svg>

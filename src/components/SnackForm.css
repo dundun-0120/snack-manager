@@ -1,0 +1,462 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.snack-form-modal {
+  max-width: 600px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+form {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 双图上传区域 */
+.dual-image-group {
+  margin-bottom: 20px;
+}
+
+.dual-image-upload {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.image-upload-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-upload-area {
+  width: 100%;
+  height: 120px;
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.image-upload-area:hover {
+  border-color: var(--primary-color);
+  background-color: var(--bg-color);
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-secondary);
+}
+
+.upload-icon {
+  font-size: 28px;
+}
+
+.upload-text {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.upload-hint {
+  font-size: 11px;
+  color: #999;
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.image-label {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* AI识别按钮 */
+.ai-analyze-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.ai-analyze-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.ai-analyze-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 识别结果说明 */
+.extraction-result {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.extraction-result.all-success {
+  background-color: #e8f5e9;
+  border: 1px solid #4caf50;
+}
+
+.extraction-result.has-failed {
+  background-color: #fff3e0;
+  border: 1px solid #ff9800;
+}
+
+.extracted-fields {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.failed-fields {
+  margin-top: 5px;
+  color: #e65100;
+}
+
+/* 识别中状态 */
+.analyzing-overlay-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  margin-top: 10px;
+  color: #667eea;
+}
+
+/* 名称输入和价格信息 */
+.name-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.name-input-wrapper input {
+  flex: 1;
+}
+
+.searching-indicator {
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+  color: #667eea;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.price-info {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: #e8f5e9;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #2e7d32;
+}
+
+.avg-price {
+  font-weight: bold;
+  color: #1b5e20;
+  margin-left: 8px;
+}
+
+/* 价格输入和AI识别按钮 */
+.price-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-input-wrapper input {
+  flex: 1;
+}
+
+.ai-price-btn {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.ai-price-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(102, 126, 234, 0.3);
+}
+
+.ai-price-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 批次显示和添加样式 */
+.batches-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.batch-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #f5f5f5;
+}
+
+.batch-item.expired {
+  background: #fdecea;
+}
+
+.batch-item.critical {
+  background: #fef3e2;
+}
+
+.batch-item.warning {
+  background: #fff9e6;
+}
+
+.batch-stock {
+  font-weight: bold;
+}
+
+.batch-expiry.expired {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.batch-expiry.critical {
+  color: #ff6f00;
+}
+
+.batch-expiry.warning {
+  color: #f9a825;
+}
+
+.add-batch-inline-btn {
+  padding: 6px 12px;
+  background: #f0f2ff;
+  color: #667eea;
+  border: 1px dashed #667eea;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-batch-inline-btn:hover {
+  background: #667eea;
+  color: white;
+  border-style: solid;
+}
+
+/* 首次添加批次样式 */
+.batch-add-section {
+  margin-top: 8px;
+}
+
+.batch-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.batch-stock-input,
+.batch-days-input {
+  width: 80px;
+  padding: 6px 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.add-batch-btn {
+  padding: 6px 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-batch-btn:hover {
+  background: #5a6fd6;
+}
+
+.temp-batches-list {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.temp-batch-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: #e8f5e9;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.remove-batch-btn {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.remove-batch-btn:hover {
+  color: #b71c1c;
+}
+
+.analyzing-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

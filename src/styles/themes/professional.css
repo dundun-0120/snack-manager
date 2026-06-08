@@ -1,0 +1,11 @@
+body.theme-professional {
+  --primary-color: #2B579A;
+  --secondary-color: #4A90D9;
+  --success-color: #28A745;
+  --warning-color: #FFC107;
+  --danger-color: #DC3545;
+  --text-color: #333333;
+  --bg-color: #F5F5F5;
+  --card-bg: #FFFFFF;
+  --border-color: #CCCCCC;
+}

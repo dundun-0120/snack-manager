@@ -1,0 +1,159 @@
+body.theme-cute {
+  --primary-color: #FF6B6B;
+  --secondary-color: #FFE66D;
+  --success-color: #4ECDC4;
+  --warning-color: #FFE66D;
+  --danger-color: #FF6B6B;
+  --text-color: #2D3436;
+  --bg-color: #FFF9F0;
+  --card-bg: #FFFFFF;
+  --border-color: #FFD93D;
+  --text-secondary: #636E72;
+  --input-bg: #FFFDF7;
+}
+
+/* 可爱风格定制 */
+body.theme-cute .sidebar {
+  background: linear-gradient(180deg, #FFE8E8 0%, #FFF0F5 100%);
+  border-right: 2px solid #FFD93D;
+}
+
+body.theme-cute .sidebar-logo {
+  border-bottom: 2px dashed #FFD93D;
+  font-size: 17px;
+}
+
+body.theme-cute .sidebar-menu li a {
+  border-radius: 20px;
+  margin: 4px 10px;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+body.theme-cute .sidebar-menu li a:hover {
+  background-color: rgba(255, 107, 107, 0.15);
+  transform: translateX(4px);
+}
+
+body.theme-cute .sidebar-menu li a.active {
+  background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+  color: white;
+  box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
+}
+
+body.theme-cute .header {
+  background: linear-gradient(90deg, #FFF0F5 0%, #FFE8E8 100%);
+  border-bottom: 2px solid #FFD93D;
+}
+
+body.theme-cute .footer {
+  background: linear-gradient(90deg, #FFF0F5 0%, #FFE8E8 100%);
+  border-top: 2px solid #FFD93D;
+}
+
+body.theme-cute .add-btn,
+body.theme-cute .submit-btn {
+  background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
+  transition: all 0.3s ease;
+}
+
+body.theme-cute .add-btn:hover,
+body.theme-cute .submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+body.theme-cute .confirm-btn {
+  background: linear-gradient(135deg, #4ECDC4, #6EE7DE);
+  border-radius: 20px;
+}
+
+body.theme-cute .cancel-btn {
+  background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+  border-radius: 20px;
+}
+
+body.theme-cute .snack-card {
+  border-radius: 16px;
+  border: 2px solid #FFD93D;
+  box-shadow: 0 4px 15px rgba(255, 217, 61, 0.15);
+  transition: all 0.3s ease;
+}
+
+body.theme-cute .snack-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 217, 61, 0.25);
+}
+
+body.theme-cute .stat-card {
+  border-radius: 16px;
+  border: 2px solid #FFD93D;
+  box-shadow: 0 4px 15px rgba(255, 217, 61, 0.15);
+}
+
+body.theme-cute .section,
+body.theme-cute .queue-section,
+body.theme-cute .records-section,
+body.theme-cute .settings-section,
+body.theme-cute .ranking-section,
+body.theme-cute .stats-section,
+body.theme-cute .recommend-section,
+body.theme-cute .tips-section {
+  border-radius: 16px;
+  border: 2px solid #FFD93D;
+  box-shadow: 0 4px 15px rgba(255, 217, 61, 0.1);
+}
+
+body.theme-cute .member-card {
+  border-radius: 16px;
+  border: 2px solid #FFD93D;
+}
+
+body.theme-cute .modal-content {
+  border-radius: 20px;
+  border: 2px solid #FFD93D;
+}
+
+body.theme-cute .queue-item {
+  border-radius: 12px;
+  border: 1px solid #FFD93D;
+}
+
+body.theme-cute .recommend-card {
+  border-radius: 16px;
+  border: 1px solid #FFD93D;
+}
+
+body.theme-cute .form-group input,
+body.theme-cute .form-group select,
+body.theme-cute .form-group textarea {
+  border-radius: 12px;
+  border: 2px solid #FFD93D;
+  background-color: var(--input-bg);
+}
+
+body.theme-cute .form-group input:focus,
+body.theme-cute .form-group select:focus,
+body.theme-cute .form-group textarea:focus {
+  border-color: #FF6B6B;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+}
+
+body.theme-cute .member-avatar {
+  border-radius: 50%;
+  border: 3px solid #FFD93D;
+}
+
+body.theme-cute .records-table th {
+  color: #FF6B6B;
+}
+
+body.theme-cute .settings-btn {
+  border-radius: 20px;
+  border: 2px solid #FFD93D;
+  background-color: #FFF9F0;
+}

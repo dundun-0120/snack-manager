@@ -1,0 +1,139 @@
+/* ========================================
+   活泼可爱主题 - 灵动动画效果
+   通过 body.cute-fx-* 类名控制各项效果的开关
+   ======================================== */
+
+/* 🎀 菜单弹跳效果 */
+body.cute-fx-bounce .sidebar-menu li a:hover {
+  transform: translateX(4px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.25);
+}
+
+body.cute-fx-bounce .sidebar-menu li a:active {
+  transform: translateX(2px) scale(0.98);
+}
+
+/* 🌈 渐变流动效果 */
+body.cute-fx-gradient .sidebar {
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+body.cute-fx-gradient .page-header {
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ 按钮闪烁效果 */
+body.cute-fx-sparkle .add-btn:hover,
+body.cute-fx-sparkle .submit-btn:hover,
+body.cute-fx-sparkle .action-btn:hover {
+  animation: sparkle 0.6s ease-in-out;
+}
+
+@keyframes sparkle {
+  0% { box-shadow: 0 0 0 rgba(255, 107, 107, 0); }
+  30% { box-shadow: 0 0 15px rgba(255, 107, 107, 0.5), 0 0 30px rgba(255, 230, 109, 0.3); }
+  60% { box-shadow: 0 0 8px rgba(255, 107, 107, 0.3), 0 0 20px rgba(255, 230, 109, 0.2); }
+  100% { box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3); }
+}
+
+/* 💫 卡片悬浮效果 */
+body.cute-fx-float .member-card:hover,
+body.cute-fx-float .snack-card:hover,
+body.cute-fx-float .settings-section:hover {
+  transform: translateY(-5px) rotate(0.5deg);
+  box-shadow: 0 8px 25px rgba(255, 217, 61, 0.25);
+}
+
+body.cute-fx-float .member-card,
+body.cute-fx-float .snack-card,
+body.cute-fx-float .settings-section {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+/* 🎵 图标摇摆效果 */
+body.cute-fx-wiggle .sidebar-logo {
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+body.cute-fx-wiggle .sidebar-menu li a .icon {
+  display: inline-block;
+  animation: iconWiggle 4s ease-in-out infinite;
+}
+
+body.cute-fx-wiggle .sidebar-menu li:nth-child(2) a .icon { animation-delay: 0.2s; }
+body.cute-fx-wiggle .sidebar-menu li:nth-child(3) a .icon { animation-delay: 0.4s; }
+body.cute-fx-wiggle .sidebar-menu li:nth-child(4) a .icon { animation-delay: 0.6s; }
+body.cute-fx-wiggle .sidebar-menu li:nth-child(5) a .icon { animation-delay: 0.8s; }
+body.cute-fx-wiggle .sidebar-menu li:nth-child(6) a .icon { animation-delay: 1.0s; }
+body.cute-fx-wiggle .sidebar-menu li:nth-child(7) a .icon { animation-delay: 1.2s; }
+body.cute-fx-wiggle .sidebar-menu li:nth-child(8) a .icon { animation-delay: 1.4s; }
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  75% { transform: rotate(-2deg); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  10% { transform: rotate(-8deg) scale(1.1); }
+  20% { transform: rotate(8deg) scale(1.1); }
+  30% { transform: rotate(-5deg) scale(1.05); }
+  40% { transform: rotate(5deg) scale(1.05); }
+  50%, 100% { transform: rotate(0deg) scale(1); }
+}
+
+/* 🍬 配额条呼吸效果 */
+body.cute-fx-breathe .quota-bar {
+  animation: breathe 2s ease-in-out infinite;
+}
+
+body.cute-fx-breathe .quota-bar-container {
+  overflow: hidden;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
+}
+
+/* 🎪 页面切换淡入效果 */
+body.cute-fx-fade .main-content > * {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌟 底部按钮波浪效果 */
+body.cute-fx-wave .footer-btn {
+  display: inline-block;
+}
+
+body.cute-fx-wave .footer-btn:hover {
+  animation: wave 0.5s ease-in-out;
+}
+
+@keyframes wave {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-3px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-1px); }
+  100% { transform: translateY(0); }
+}

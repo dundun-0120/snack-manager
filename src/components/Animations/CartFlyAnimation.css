@@ -1,0 +1,65 @@
+.cart-fly-item {
+  position: fixed;
+  font-size: 32px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* 弹跳样式 */
+.fly-bounce {
+  animation: flyBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes flyBounce {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  30% {
+    transform: translate(calc(var(--delta-x) * 0.3), calc(var(--delta-y) * 0.3 - 30px)) scale(1.2);
+  }
+  60% {
+    transform: translate(calc(var(--delta-x) * 0.7), calc(var(--delta-y) * 0.7 + 10px)) scale(1.1);
+  }
+  100% {
+    transform: translate(var(--delta-x), var(--delta-y)) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* 滑行样式 */
+.fly-slide {
+  animation: flySlide 0.8s ease-in-out forwards;
+}
+
+@keyframes flySlide {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(calc(var(--delta-x) * 0.5), calc(var(--delta-y) * 0.5)) rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: translate(var(--delta-x), var(--delta-y)) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* 抛物线样式 */
+.fly-parabola {
+  animation: flyParabola 0.8s ease-out forwards;
+}
+
+@keyframes flyParabola {
+  0% {
+    transform: translate(0, 0);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translate(calc(var(--delta-x) * 0.5), calc(var(--delta-y) * 0.5 - 100px)) scale(1.3);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate(var(--delta-x), var(--delta-y)) scale(0.8);
+    opacity: 0;
+  }
+}

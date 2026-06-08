@@ -1,0 +1,56 @@
+body.theme-dark {
+  --primary-color: #4A90D9;
+  --secondary-color: #6C5CE7;
+  --success-color: #00B894;
+  --warning-color: #FDCB6E;
+  --danger-color: #E17055;
+  --text-color: #DFE6E9;
+  --bg-color: #1E272E;
+  --card-bg: #2D3436;
+  --border-color: #4A5568;
+  --text-secondary: #A0AEC0;
+  --input-bg: #374151;
+}
+
+/* 深色模式组件适配 */
+body.theme-dark .empty-message { color: var(--text-secondary); }
+body.theme-dark .snack-name,
+body.theme-dark .record-time,
+body.theme-dark .member-role,
+body.theme-dark .member-quota { color: var(--text-secondary); }
+body.theme-dark .records-table th { color: var(--text-secondary); border-color: var(--border-color); }
+body.theme-dark .records-table td { border-color: var(--border-color); }
+body.theme-dark .queue-item { background-color: var(--input-bg); }
+body.theme-dark .sidebar { background-color: #252F3B; border-color: var(--border-color); }
+body.theme-dark .sidebar-logo { border-color: var(--border-color); }
+body.theme-dark .header { background-color: #252F3B; border-color: var(--border-color); }
+body.theme-dark .footer { background-color: #252F3B; border-color: var(--border-color); }
+body.theme-dark .form-group input,
+body.theme-dark .form-group select,
+body.theme-dark .form-group textarea { background-color: var(--input-bg); border-color: var(--border-color); color: var(--text-color); }
+body.theme-dark .add-btn:hover,
+body.theme-dark .submit-btn:hover { opacity: 0.9; }
+body.theme-dark .stat-card { background-color: var(--card-bg); }
+body.theme-dark .section,
+body.theme-dark .settings-section,
+body.theme-dark .ranking-section,
+body.theme-dark .stats-section,
+body.theme-dark .recommend-section,
+body.theme-dark .tips-section { background-color: var(--card-bg); }
+body.theme-dark .snack-card { background-color: var(--card-bg); }
+body.theme-dark .snack-card.expired { background-color: #3D2020; border-color: var(--danger-color); }
+body.theme-dark .snack-card.critical { background-color: #3D3020; border-color: #FF9500; }
+body.theme-dark .snack-card.warning { background-color: #3D3520; border-color: #FFCC00; }
+body.theme-dark .member-card { background-color: var(--card-bg); }
+body.theme-dark .recommend-card { background-color: var(--input-bg); }
+body.theme-dark .modal-content { background-color: var(--card-bg); }
+body.theme-dark .close-btn { color: var(--text-color); }
+body.theme-dark .about-info { color: var(--text-secondary); }
+body.theme-dark .queue-actions button:hover { opacity: 0.85; }
+body.theme-dark .snack-actions button { background-color: var(--input-bg); border-color: var(--border-color); color: var(--text-color); }
+body.theme-dark .restock-btn { background-color: #007AFF; color: white; border-color: #007AFF; }
+body.theme-dark .cancel-btn { background-color: var(--input-bg); border-color: var(--border-color); color: var(--text-color); }
+body.theme-dark .settings-btn { background-color: var(--input-bg); border-color: var(--border-color); color: var(--text-color); }
+body.theme-dark .theme-switcher select { background-color: var(--input-bg); border-color: var(--border-color); color: var(--text-color); }
+body.theme-dark .library-controls input { background-color: var(--input-bg); border-color: var(--border-color); color: var(--text-color); }
+body.theme-dark .library-controls select { background-color: var(--input-bg); border-color: var(--border-color); color: var(--text-color); }

@@ -1,0 +1,362 @@
+.batch-add-overlay {
+  z-index: 1001;
+}
+
+.batch-add-modal {
+  max-width: 900px;
+  max-height: 85vh;
+}
+
+.batch-add-content {
+  padding: 20px;
+}
+
+/* 上传区域 */
+.upload-section {
+  margin-bottom: 20px;
+}
+
+.upload-area {
+  width: 100%;
+  height: 120px;
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  border-color: var(--primary-color);
+  background-color: var(--bg-color);
+}
+
+.upload-icon {
+  font-size: 36px;
+}
+
+.upload-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.upload-hint {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.add-more-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 识别按钮 */
+.analyze-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.analyze-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.analyze-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.analyze-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.warning-text {
+  color: #ff9800;
+  font-size: 14px;
+}
+
+/* 价格搜索区域 */
+.price-search-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price-search-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.price-search-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.price-search-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.price-search-hint {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* 表格区域 */
+.images-table-section {
+  margin-bottom: 20px;
+}
+
+.images-table-section h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.images-table {
+  overflow-x: auto;
+}
+
+.images-table table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.images-table th,
+.images-table td {
+  padding: 10px 8px;
+  text-align: left;
+  border: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.images-table th {
+  background-color: var(--bg-color);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.images-table td {
+  font-size: 13px;
+}
+
+.analyzing-row {
+  background-color: rgba(102, 126, 234, 0.1);
+}
+
+.table-preview {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.table-input {
+  width: 100%;
+  min-width: 120px;
+  padding: 6px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.table-input.small {
+  width: 60px;
+  min-width: 60px;
+}
+
+/* 名称列专用样式 - 确保完整显示 */
+.table-input.name-input {
+  min-width: 180px;
+  width: 100%;
+  white-space: normal;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+/* 表格列宽设置 - 10列: 图片/名称/分类/规格/库存/价格/剩余天数/需手动填写/状态/操作 */
+.images-table th:nth-child(1),
+.images-table td:nth-child(1) {
+  width: 80px;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* 名称列 - 不限制最大宽度，确保完整显示 */
+.images-table th:nth-child(2),
+.images-table td:nth-child(2) {
+  min-width: 200px;
+}
+
+.images-table th:nth-child(3),
+.images-table td:nth-child(3) {
+  width: 100px;
+  min-width: 100px;
+}
+
+.images-table th:nth-child(4),
+.images-table td:nth-child(4) {
+  width: 80px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.images-table th:nth-child(5),
+.images-table td:nth-child(5),
+.images-table th:nth-child(6),
+.images-table td:nth-child(6),
+.images-table th:nth-child(7),
+.images-table td:nth-child(7) {
+  width: 90px;
+  min-width: 90px;
+  text-align: center;
+}
+
+.images-table th:nth-child(8),
+.images-table td:nth-child(8) {
+  width: 120px;
+  min-width: 120px;
+}
+
+.images-table th:nth-child(9),
+.images-table td:nth-child(9) {
+  width: 80px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.images-table th:nth-child(10),
+.images-table td:nth-child(10) {
+  width: 60px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.table-select {
+  padding: 6px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.analyzing-text {
+  color: #667eea;
+}
+
+.pending-text {
+  color: var(--text-secondary);
+}
+
+.missing-fields {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.missing-fields.complete {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.missing-fields.incomplete {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.status-badge.pending {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.status-badge.analyzing {
+  background-color: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+}
+
+.status-badge.done {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.remove-btn {
+  padding: 4px 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.remove-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 操作按钮 */
+.batch-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
