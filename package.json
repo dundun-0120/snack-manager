@@ -1,6 +1,6 @@
 {
   "name": "snack-manager",
-  "version": "3.0.0",
+  "version": "3.0.6",
   "description": "家庭零食管理系统",
   "type": "commonjs",
   "main": "electron/main.js",
